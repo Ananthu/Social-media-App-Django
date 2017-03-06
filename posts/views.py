@@ -199,7 +199,6 @@ def add_comment_to_post(request, id):
 #to see the detailed user information
 
 def user_info(request):
-	print request.user
 	current_user=User_Detailed_Info.objects.get(name=request.user)
 	user_posts=Post.objects.filter(created_user=request.user.username)
 	return render(request,'my_blog/user_detailed_info.html',{"current_user":current_user,"user_posts":user_posts})
