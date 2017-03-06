@@ -2,9 +2,9 @@ from django.http import HttpResponse
 from django.shortcuts import render,get_object_or_404,redirect
 from django.core.urlresolvers import reverse
 from models import Post,Comment,User_Detailed_Info
-from forms import PostForm,CommentForm,DetailedUserForm
+from posts.forms import PostForm,CommentForm,DetailedUserForm
 from django.views.generic import View
-from forms import RegistrationForm,LoginForm
+from posts.forms import RegistrationForm,LoginForm
 from django.contrib.auth import authenticate,login
 from django.contrib.auth import logout
 from django.views.generic.edit import CreateView
